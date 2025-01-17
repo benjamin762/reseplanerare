@@ -1,7 +1,7 @@
 export default function Header () {
     return <header>
         <img src="" alt="logga" />
-        <h1> Reseplaneraren </h1>
-        <div> Det bästa sättet att planera dina resor. </div>
+        <h1> The Travel Planner </h1>
+        <div> The best application for planning your travels. </div>
     </header>
 }

@@ -1,9 +1,9 @@
 
-# Reseplanerare
+# The Travel Planner
 
-Bild
+![Screenshot](doc/img/screenshot-readme.png)
 
-Det här är en reseplanerare.
+This is a travel planner application. It can keep track of all your planned travels.
 
 ## Install
 
@@ -13,6 +13,9 @@ Det här är en reseplanerare.
 
 ## Use
 
+The application will show all your planned travels.
+
+To add a new one fill out the form and click the add button.
 
 
 
