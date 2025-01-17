@@ -1,3 +1,21 @@
+
+# Reseplanerare
+
+Bild
+
+Det här är en reseplanerare.
+
+## Install
+
+1. Clone repo
+2. Npm install
+3. Npm run dev
+
+## Use
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
