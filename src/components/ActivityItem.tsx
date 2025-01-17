@@ -1,3 +1,5 @@
+import Activity from "../types/activityTypes"
+
 export default function ActivityItem (props: {activity: Activity}) {
     const {activity} = props
 

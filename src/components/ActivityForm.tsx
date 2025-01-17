@@ -13,7 +13,11 @@ export default function ActivityForm (props: { onNew: (newActivity: Activity) =>
 
     function add (event: React.MouseEvent<HTMLButtonElement>) {
         event.preventDefault()
-        onNew(newActivity)
+        if (newActivity.name == "" || newActivity.date=="" || newActivity.place =="") {
+            console.log("Did not att activity with empty fields.")
+        } else {
+            onNew(newActivity)
+        }
     }
 
 
