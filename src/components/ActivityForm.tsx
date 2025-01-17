@@ -5,19 +5,22 @@ export default function ActivityForm (props: { onNew: (newActivity: Activity) =>
     const { onNew } = props
     let newActivity: Activity = {name: '', date: '', place: ''}
 
-    function change(what: 'name'|'date'|'place') {
+    // Function to change newActivity on change of input fields.
+    function change(key: 'name'|'date'|'place') {
         return function (event: ChangeEvent<HTMLInputElement>) {
-            newActivity[what] = event.target.value;
+            newActivity[key] = event.target.value;
         } 
     }
 
-    function add (event: React.MouseEvent<HTMLButtonElement>) {
+    function addButtonClicked (event: React.MouseEvent<HTMLButtonElement>) {
         event.preventDefault()
+        // Check empty text.
         if (newActivity.name == "" || newActivity.date=="" || newActivity.place =="") {
             console.log("Did not add activity with empty fields.")
             return
         }
-        onNew(newActivity)
+        
+        onNew(newActivity) // Send newActivity in callback.
     }
 
 
@@ -30,7 +33,7 @@ export default function ActivityForm (props: { onNew: (newActivity: Activity) =>
             <input id="date" type="date" onChange={change('date')} />
             <label htmlFor="place">Place</label>
             <input id="place" onChange={change('place')} />
-            <button onClick={add}>Add</button>
+            <button onClick={addButtonClicked}>Add</button>
         </fieldset>
     </form>
 }
