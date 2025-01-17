@@ -4,6 +4,7 @@ import Activity from "../types/activityTypes"
 export default function ActivityList (props: { activities: Activity[] })  {
     const { activities }  = props
 
+    // TODO sort function
     // let currentSort: 'name'| 'name-reverese'|'date'
     // function sort(){}
 

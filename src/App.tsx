@@ -6,11 +6,6 @@ import Activity from './types/activityTypes'
 import { useState } from 'react'
 
 function App() {
-  // let activities: Activity[] = [{
-  //   name: 'Example activity',
-  //   date: '2025-01-01',
-  //   place: 'Somewhere'
-  // }]
   let [activities, setActivities] = useState([{
     name: 'Example activity',
     date: '2025-01-01',
