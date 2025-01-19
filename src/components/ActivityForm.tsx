@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 import Activity from "../types/activityTypes";
 
-export default function ActivityForm (props: { onNew: (newActivity: Activity) => void }) {
+export default function ActivityForm (props: { onNew: (newActivity: Activity) => void }) { // Props contains a callback function that takes a Activity type.
     const { onNew } = props
     let newActivity: Activity = {name: '', date: '', place: ''}
 
