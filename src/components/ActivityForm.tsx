@@ -1,18 +1,19 @@
 import { ChangeEvent } from "react";
 import Activity from "../types/activityTypes";
 
-export default function ActivityForm (props: { onNew: (newActivity: Activity) => void }) { // Props contains a callback function that takes a Activity type.
-    const { onNew } = props
+export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity) => void }) { // Props contains a callback function that takes a Activity type.
+// export default function ActivityForm (props: { onNew: (newActivity: Activity) => void }) { // Props contains a callback function that takes a Activity type.
+    // const { onNew } = props
     let newActivity: Activity = {name: '', date: '', place: ''}
 
     // Function to change newActivity on change of input fields.
-    function change(key: 'name'|'date'|'place') {
+    function change(key: 'name'|'date'|'place') { //change new activity
         return function (event: ChangeEvent<HTMLInputElement>) {
             newActivity[key] = event.target.value;
         } 
     }
 
-    function addButtonClicked (event: React.MouseEvent<HTMLButtonElement>) {
+    function addButtonClicked (event: React.MouseEvent<HTMLButtonElement>) { //Bättre namn gär två saker.
         event.preventDefault()
         // Check empty text.
         if (newActivity.name == "" || newActivity.date=="" || newActivity.place =="") {
