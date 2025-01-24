@@ -12,7 +12,7 @@ export default function ActivityList (props: { activities: Activity[] })  {
     const activityItems = activities.map((a, i) => <ActivityItem activity={a} key={i}/>)
 
     return <div className="activityList">
-        <table>
+        <table border="1">
             <caption>All activites</caption>
             <thead>
                 <tr>

@@ -28,12 +28,19 @@ export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity)
     return <form>
         <fieldset>
             <legend>Add your new travel plan</legend>
+
             <label htmlFor="name">Name</label>
             <input id="name" onChange={change('name')} />
+            <span className="error"></span>
+
             <label htmlFor="date">Date</label>
             <input id="date" type="date" onChange={change('date')} />
+            <span className="error"></span>
+
             <label htmlFor="place">Place</label>
             <input id="place" onChange={change('place')} />
+            <span className="error">Can not be empty. :(</span>
+
             <button onClick={addButtonClicked}>Add</button>
         </fieldset>
     </form>
