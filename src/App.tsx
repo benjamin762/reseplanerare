@@ -16,12 +16,15 @@ function App() {
     setActivities( activities.concat(newActivity))
     console.log("New activity added", newActivity, activities)
   }
+  function deleteActivity(id: number) {
+    setActivities(activities.filter((_, i) =>  i != id))
+  }
 
 
   return (
     <>
       <Header />
-      <ActivityList activities={activities} />
+      <ActivityList activities={activities} onEdit={()=>null} onDelete={deleteActivity} />
       <ActivityForm onNew={addActivity} />
     </>
   )

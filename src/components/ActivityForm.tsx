@@ -1,9 +1,7 @@
 import { ChangeEvent } from "react";
 import Activity from "../types/activityTypes";
 
-export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity) => void }) { // Props contains a callback function that takes a Activity type.
-// export default function ActivityForm (props: { onNew: (newActivity: Activity) => void }) { // Props contains a callback function that takes a Activity type.
-    // const { onNew } = props
+export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity) => void }) {
     let newActivity: Activity = {name: '', date: '', place: ''}
 
     // Function to change newActivity on change of input fields.
@@ -30,7 +28,7 @@ export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity)
             <legend>Add your new travel plan</legend>
 
             <label htmlFor="name">Name</label>
-            <input id="name" onChange={change('name')} />
+            <input id="name"  onChange={change('name')} />
             <span className="error"></span>
 
             <label htmlFor="date">Date</label>
