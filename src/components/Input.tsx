@@ -2,6 +2,7 @@
 
 export default function Input ({type, onChange, errorFunction}: {type: "name"|"date"|"place", onChange: (value: string) => void, errorFunction (value: string) => string|null }) {
     let error = ''
+    //is touched state, onBlur
 
     function handleChange (event) {
         error = errorFunction(event.target.value);

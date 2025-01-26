@@ -11,6 +11,10 @@ function App() {
     name: 'Summer vacation',
     date: '2025-06-01',
     place: 'London'
+  }, {
+    name: 'Visit space',
+    date: '2025-06-19',
+    place: 'Mars'
   }])
   let [activityToEdit, setActivityToEdit] = useState(-1)
 

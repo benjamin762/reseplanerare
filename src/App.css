@@ -32,3 +32,9 @@ fieldset {
     grid-column: 2;
   }
 }
+
+.editActivityForm {
+  box-shadow: 20px 20px black;
+  background: silver;
+  margin: 30px 0;
+}
