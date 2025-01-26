@@ -9,7 +9,11 @@ This is a travel planner application. It can keep track of all your planned trav
 
 1. Clone repo
 2. Npm install
-3. Npm run dev
+3. Create .env file
+  ```
+  VITE_WEATHER_API="weatherapi.com api key"
+  ```
+4. Npm run dev
 
 ## Use
 

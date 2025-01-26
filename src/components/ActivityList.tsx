@@ -18,7 +18,8 @@ export default function ActivityList ({ activities, onEdit, onDelete}: { activit
                     <th>Name</th>
                     <th>Date</th>
                     <th>Place</th>
-                    <th></th>
+                    <th>Weather today</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>

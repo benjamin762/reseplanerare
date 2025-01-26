@@ -7,9 +7,9 @@ import { useState } from 'react'
 
 function App() {
   let [activities, setActivities] = useState([{
-    name: 'Example activity',
-    date: '2025-01-01',
-    place: 'Somewhere'
+    name: 'Summer vacation',
+    date: '2025-06-01',
+    place: 'London'
   }])
 
   function addActivity(newActivity: Activity) {
