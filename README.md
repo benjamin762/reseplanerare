@@ -5,6 +5,8 @@
 
 This is a travel planner application. It can keep track of all your planned travels.
 
+NEW You can now see the weather, edit and delete your plans.
+
 ## Install
 
 1. Clone repo
@@ -19,7 +21,12 @@ This is a travel planner application. It can keep track of all your planned trav
 
 The application will show all your planned travels.
 
-To add a new one fill out the form and click the add button.
+To add a new one fill out the form and click the add button. The weather will show automatically.
+
+Click delete to delete a travel plan.
+
+Click edit to open the edit form and make your changes, then click save. If you changed your mind click cancel to ignore the changes.
+
 
 
 
