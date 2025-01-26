@@ -43,7 +43,7 @@ export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity)
             <input id="place" value={newActivity.place} onChange={updateNewActivityOnInputChange('place')} onBlur={() => setPlaceTouched(true)} />
             <span className="error"> { placeTouched && newActivity.place?.trim() == "" ? "Place can not be empty." : ""} </span>
 
-            <button onClick={checkEmptyFieldsAndSubmit} disabled={newActivity.name == "" || newActivity.date=="" || newActivity.place ==""}>Add</button>
+            <button onClick={checkEmptyFieldsAndSubmit} disabled={newActivity.name == "" || newActivity.date=="" || newActivity.place ==""} title={newActivity.name == "" || newActivity.date=="" || newActivity.place =="" ? "Fill all details first." : ""} >Add</button>
         </fieldset>
     </form>
 }
