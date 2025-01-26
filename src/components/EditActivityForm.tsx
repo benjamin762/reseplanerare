@@ -1,8 +1,8 @@
 import { ChangeEvent, useState } from "react";
 import Activity from "../types/activityTypes";
 
-export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity) => void }) {
-    const [newActivity, setNewActivity] = useState({name: '', date: '', place: ''})
+export default function EditActivityForm ({ activity, onFinish }: {activity: Activity, onFinish: (editedActivity: Activity) => void }) {
+    const [newActivity, setNewActivity] = useState(activity)
     
     // Function to change newActivity on change of input fields.
     function change(key: 'name'|'date'|'place') { //change new activity
@@ -11,7 +11,7 @@ export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity)
         } 
     }
 
-    function addButtonClicked (event: React.MouseEvent<HTMLButtonElement>) { //Bättre namn gär två saker.
+    function saveEdit (event: React.MouseEvent<HTMLButtonElement>) { //Bättre namn gär två saker.
         event.preventDefault()
         // Check empty text.
         if (!(newActivity.name && newActivity.date && newActivity.place)) {
@@ -19,14 +19,18 @@ export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity)
             return
         }
         
-        onNew(newActivity) // Send newActivity in callback.
+        onFinish(newActivity) // Send newActivity in callback.
         setNewActivity({name: '', date: '', place: ''})
+    }
+    function cancelEdit (event: React.MouseEvent<HTMLButtonElement>) {
+        event.preventDefault()
+        onFinish(activity)
     }
 
 
-    return <form>
+    return <form className="editActivityForm">
         <fieldset>
-            <legend>Add your new travel plan</legend>
+            <legend>Edit {activity.name}</legend>
 
             <label htmlFor="name">Name</label>
             <input id="name" value={newActivity.name} onChange={change('name')} />
@@ -40,7 +44,8 @@ export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity)
             <input id="place" value={newActivity.place} onChange={change('place')} />
             <span className="error"> { newActivity.place?.trim() ? "" : "Place can not be empty." } </span>
 
-            <button onClick={addButtonClicked} disabled={newActivity.name == "" || newActivity.date=="" || newActivity.place ==""}>Add</button>
+            <button onClick={saveEdit} disabled={newActivity.name == "" || newActivity.date=="" || newActivity.place ==""}> Save </button>
+            <button onClick={cancelEdit}> Cancel </button>
         </fieldset>
     </form>
 }
