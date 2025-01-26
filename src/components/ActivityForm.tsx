@@ -23,7 +23,12 @@ export default function ActivityForm ({ onNew }: {onNew: (newActivity: Activity)
         }
         
         onNew(newActivity) // Send newActivity in callback.
+
+        // Reset form
         setNewActivity({name: '', date: '', place: ''})
+        setNameTouched(false)
+        setDateTouched(false)
+        setPlaceTouched(false)
     }
 
 
