@@ -5,6 +5,7 @@ import ActivityForm from './components/ActivityForm'
 import Activity from './types/activityTypes'
 import { useState } from 'react'
 import EditActivityForm from './components/EditActivityForm'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   let [activities, setActivities] = useState([{
@@ -43,6 +44,7 @@ function App() {
   return (
     <>
       <Header />
+      <Outlet />
       <ActivityList activities={activities} onEdit={beginEditActivity} onDelete={deleteActivity} />
       { activityToEdit != -1 ?
          <EditActivityForm activity={activities[activityToEdit]} onFinish={finishEditActivity}/>
